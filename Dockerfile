@@ -8,7 +8,7 @@ ENV CATALINA_OPTS="-Dfile.encoding=UTF-8 -Duser.timezone=Asia/Seoul"
 RUN rm -rf $CATALINA_HOME/webapps/*
 
 # 로컬 WAR을 컨테이너에 배포 (ROOT.war → 루트 컨텍스트 /)
-COPY target/JSPProject-1.0-SNAPSHOT.war $CATALINA_HOME/webapps/JSPProject-1.0-SNAPSHOT.war
+COPY target/root.war $CATALINA_HOME/webapps/root.war
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
